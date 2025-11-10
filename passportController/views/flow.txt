@@ -1,0 +1,12 @@
+home.ejs=locslhost:9999
+passport button click= nidpage.ejs
+submit click= passportRegOrClaim
+passport reg click= step1.ejs for qr connection
+step1 create connection click = invitationqr.ejs
+after scan = auto to step2.ejs
+after submit = alert "submitted"
+Next e click korle = alert "check for claim pass" 
+
+claim e click = 2 condition check(either few days or claimPasport page)
+
+

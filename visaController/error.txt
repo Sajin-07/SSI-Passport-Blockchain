@@ -1,0 +1,56 @@
+Waiting for connection...
+Faber      | 2024-11-21 22:55:50,782 acapy_agent.admin.server ERROR Handler error with exception: Unprocessable Entity
+Faber      | 
+Faber      | =================
+Faber      | Traceback (most recent call last):
+Faber      |   File "/home/aries/.local/lib/python3.12/site-packages/webargs/core.py", line 472, in async_parse
+Faber      |     data = self._process_location_data(
+Faber      |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Faber      |   File "/home/aries/.local/lib/python3.12/site-packages/webargs/core.py", line 387, in _process_location_data
+Faber      |     data = schema.load(preprocessed_data, **load_kwargs)
+Faber      |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Faber      |   File "/home/aries/.local/lib/python3.12/site-packages/marshmallow/schema.py", line 722, in load
+Faber      |     return self._do_load(
+Faber      |            ^^^^^^^^^^^^^^
+Faber      |   File "/home/aries/.local/lib/python3.12/site-packages/marshmallow/schema.py", line 909, in _do_load
+Faber      |     raise exc
+Faber      | marshmallow.exceptions.ValidationError: {'credential_preview': {'attributes': {2: {'value': ['Not a valid string.']}}}}
+Faber      | 
+Faber      | During handling of the above exception, another exception occurred:
+Faber      | 
+Faber      | Traceback (most recent call last):
+Faber      |   File "/home/aries/acapy_agent/admin/server.py", line 141, in ready_middleware
+Faber      |     return await handler(request)
+Faber      |            ^^^^^^^^^^^^^^^^^^^^^^
+Faber      |   File "/home/aries/acapy_agent/admin/server.py", line 212, in debug_middleware
+Faber      |     return await handler(request)
+Faber      |            ^^^^^^^^^^^^^^^^^^^^^^
+Faber      |   File "/home/aries/acapy_agent/admin/server.py", line 357, in setup_context
+Faber      |     return await task
+Faber      |            ^^^^^^^^^^
+Faber      |   File "/usr/local/lib/python3.12/asyncio/futures.py", line 291, in __await__
+Faber      |     yield self  # This tells Task to wait for completion.
+Faber      |     ^^^^^^^^^^
+Faber      |   File "/usr/local/lib/python3.12/asyncio/tasks.py", line 385, in __wakeup
+Faber      |     future.result()
+Faber      |   File "/usr/local/lib/python3.12/asyncio/futures.py", line 203, in result
+Faber      |     raise self._exception.with_traceback(self._exception_tb)
+Faber      |   File "/usr/local/lib/python3.12/asyncio/tasks.py", line 314, in __step_run_and_handle_result
+Faber      |     result = coro.send(None)
+Faber      |              ^^^^^^^^^^^^^^^
+Faber      |   File "/home/aries/acapy_agent/admin/server.py", line 199, in upgrade_middleware
+Faber      |     return await handler(request)
+Faber      |            ^^^^^^^^^^^^^^^^^^^^^^
+Faber      |   File "/home/aries/.local/lib/python3.12/site-packages/aiohttp_apispec/middlewares.py", line 33, in validation_middleware
+Faber      |     data = await request.app["_apispec_parser"].parse(
+Faber      |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Faber      |   File "/home/aries/.local/lib/python3.12/site-packages/webargs/asyncparser.py", line 30, in parse
+Faber      |     data = await self.async_parse(
+Faber      |            ^^^^^^^^^^^^^^^^^^^^^^^
+Faber      |   File "/home/aries/.local/lib/python3.12/site-packages/webargs/core.py", line 476, in async_parse
+Faber      |     await self._async_on_validation_error(
+Faber      |   File "/home/aries/.local/lib/python3.12/site-packages/webargs/core.py", line 297, in _async_on_validation_error
+Faber      |     error_handler(
+Faber      |   File "/home/aries/.local/lib/python3.12/site-packages/webargs/aiohttpparser.py", line 170, in handle_error
+Faber      |     raise error_class(
+Faber      | aiohttp.web_exceptions.HTTPUnprocessableEntity: Unprocessable Entity

@@ -1,0 +1,83 @@
+<!-- updated main -->
+<!DOCTYPE html>
+<html lang="en" data-theme="fantasy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Passport and Visa Services</title> -->
+    <title>Immigration Center</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.0.0/dist/full.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./favicon_io/android-chrome-512x512.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            /* background: linear-gradient(120deg, #0f172a, #1e293b, #334155); */
+            /* background: linear-gradient(120deg, #191970, #000080, #1e90ff); */
+            background: linear-gradient(120deg, #000000, #434343, #666666);
+            
+            
+
+            background-size: 300% 300%;
+            animation: gradientShift 10s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Typewriter Effect */
+        .typewriter h1 {
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid orange; /* The typewriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Centers the text */
+            letter-spacing: .15em; /* Adjusts spacing between letters */
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center text-white space-y-8">
+        <div class="typewriter">
+            <h1 class="text-6xl md:text-7xl font-bold">Immigration Center</h1>
+        </div>
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+            <!-- <a href="/nidPage" target="_blank" class="btn btn-primary px-6 py-3">Passport</a> -->
+            <a href="/nidPage" target="_blank" class="btn btn-secondary px-6 py-3">Connect</a>
+        </div>
+    </header>
+</body>
+</html>
+
+
+
+

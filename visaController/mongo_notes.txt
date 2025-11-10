@@ -1,0 +1,6 @@
+open the MongoDB shell =  mongosh
+
+1. Restart MongoDB = sudo systemctl restart mongod
+2. stop mongoDB  = sudo systemctl stop mongod
+
+

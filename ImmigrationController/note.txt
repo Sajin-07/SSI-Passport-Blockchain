@@ -1,0 +1,5 @@
+LEDGER_URL=http://test.bcovrin.vonx.io AGENT_ENDPOINT=https://9e84-182-252-93-125.ngrok-free.app WEBHOOK_URL=62a7-182-252-93-125.ngrok-free.app/webhooks ./run_demo faber --webhook-url
+
+
+
+LEDGER_URL=http://test.bcovrin.vonx.io AGENT_ENDPOINT=https://f7c5-182-252-93-125.ngrok-free.app WEBHOOK_URL=cfbe-182-252-93-125.ngrok-free.app/webhooks ./run_demo faber --webhook-url
